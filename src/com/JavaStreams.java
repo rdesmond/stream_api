@@ -50,10 +50,7 @@ public class JavaStreams {
         System.out.println();
 
         // 3. Integer Stream with sum
-        System.out.println(
-                IntStream
-                        .range(1, 5)
-                        .sum());
+        System.out.println(IntStream.range(1, 5).sum());
         System.out.println();
 
         // 4. Stream.of, sorted and findFirst
@@ -61,6 +58,8 @@ public class JavaStreams {
                 .sorted()
                 .findFirst()
                 .ifPresent(System.out::println);
+
+
 
         // 5. Stream from Array, sort, filter and print
         String[] names = {"Al", "Ankit", "Kushal", "Brent", "Sarika", "Amanda", "Hans", "Shivika", "Sarah"};
@@ -100,6 +99,7 @@ public class JavaStreams {
         List<String> bands2 = Files.lines(Paths.get(bandsFile))
                 .filter(x -> x.contains("jit"))
                 .collect(Collectors.toList());
+
         bands2.forEach(x -> System.out.println(x));
         //bands2.close();
 
